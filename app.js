@@ -3,6 +3,7 @@ const square = require('./square.js');
 const rectangle = require('./rectangle.js');
 const exportsKeyword = require('./exportsKeyword.js');
 const cylinder = require('./cylinder.js');
+const questions = require('./Questions.js');
 
 
 console.log(circle);
@@ -55,3 +56,6 @@ let obj1 = {
 //    let obj2 = obj1;
 //    obj2.x = 30; // manipulating the key of obj1
 //    console.log(obj1.x, obj2.x);
+
+// ------------------------------------------------------------------------------
+questions.alpha();
