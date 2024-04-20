@@ -1,4 +1,6 @@
 const circle = require('./circle.js');
+const square = require('./square.js');
+const rectangle = require('./rectangle.js');
 
 
 console.log(circle);
@@ -6,11 +8,25 @@ console.log(circle);
 //     calculateArea: [Function: calculateArea],
 //     calculateCircumference: [Function: calculateCircumference]
 //   }
+const pi = circle.lifeOfPie;
+console.log(`PI value is ${pi}`);
+
 
 const area = circle.calculateArea(3);
 const circumference = circle.calculateCircumference(3);
 
-console.log(`Area = ${area}, Circumference = ${circumference}`);
+console.log(`CIRCLE: Area = ${area}, Circumference = ${circumference}`);
 
-const pi = circle.lifeOfPie;
-console.log(`PI value is ${pi}`);
+
+
+// --------------------------------------------------------------------------
+const sqaureArea = square.calculateAreaOfSquare(6);
+const squarePerimeter = square.calculatePerimeterOfSquare(6);
+
+console.log(`SQUARE: Area = ${sqaureArea}, Perimeter = ${squarePerimeter}`);
+
+// ----------------------------------------------------------------------------
+const areaOfRectangle = rectangle.areaOfRectangle(4, 7);
+const perimeterOfRectangle = rectangle.perimeterOfRectangle(4, 7);
+
+console.log(`RECTANGLE: Area = ${areaOfRectangle}, Perimeter = ${perimeterOfRectangle}`);
