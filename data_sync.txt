@@ -1,0 +1,2 @@
+Mikita
+Hello! Let's learn NODE.JSHello! Let's learn NODE.JSHello!This text here is written by app.js file using fs-module

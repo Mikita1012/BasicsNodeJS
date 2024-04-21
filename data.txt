@@ -1,1 +1,0 @@
-Hello! This text here is written by app.js file using fs-module

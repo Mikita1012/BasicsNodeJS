@@ -78,15 +78,28 @@ console.log(require('module').builtinModules);
 
 //  CORE MODULE - FS - FILE SYSTEM
 const fs = require('fs');
+// DONE USING ASYNC WAY 
 
-const data = "Hello! This text here is written by app.js file using fs-module";
+const data = "Hello!This text here is written by app.js file using fs-module";
+// const data = "Hello! Let's learn NODE.JS";
+
 const options = {
     "encoding" : "utf8",
-    flag: 'w'
+    flag: 'a'
 }
 
-fs.writeFile('data.txt', data, options, (err) => {
+fs.writeFile('data_async.txt', data, options, (err) => {
     if(err)
         throw err;
     console.log("File saved successfully!");
 })
+
+
+// DONE USING SYNCHORONUS WAY 
+const message = "Hey, I\ 'm learning NodeJS";
+
+try{
+  fs.writeFileSync('data_sync.txt', data, options)  
+} catch(err) {
+    throw err;
+}
