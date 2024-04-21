@@ -145,3 +145,15 @@ eventEmitter.emit('connectionMade');
 
 // mark end of program
 console.log('End of program!');
+
+// ---------------------------------------------------------------------------
+//              JSON AND JAVASCRIPT OBJECTS AND JSON MENTHODS 
+
+const obj = {
+    name : 'Aakash',
+    id : 'O4',
+    place : 'Mumbai',
+    isIndian : true
+ };
+ const str = JSON.stringify(obj);
+ console.log(str);
