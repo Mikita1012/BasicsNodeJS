@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Mikita1012/BasicsNodeJS/issues"
   },
-  "homepage": "https://github.com/Mikita1012/BasicsNodeJS#readme"
+  "homepage": "https://github.com/Mikita1012/BasicsNodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
 }
