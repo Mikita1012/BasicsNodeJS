@@ -4,6 +4,7 @@ const rectangle = require('./rectangle.js');
 const exportsKeyword = require('./exportsKeyword.js');
 const cylinder = require('./cylinder.js');
 const questions = require('./Questions.js');
+// const chalk = require('chalk'); 
 
 
 console.log(circle);
@@ -63,3 +64,29 @@ questions.alpha();
 // ---------------------------------------------------------------------------
 console.log("using nodemon here keepind app.js as starting point. whenever you made any changes in your file and saved it, the code written inside the file was automatically executed.");
 // [nodemon] starting `node app.js` == o/p for the code line above 
+
+// ---------------------------------------------------------------------------
+
+// console.log(chalk.blue('Hello World!'));
+// const log = console.log;
+// // const error = chalk.yellow.bgRed;
+// log('Address not found');
+
+// ---------------------------------------------------------------------------
+//          CORE MODULES
+console.log(require('module').builtinModules);
+
+//  CORE MODULE - FS - FILE SYSTEM
+const fs = require('fs');
+
+const data = "Hello! This text here is written by app.js file using fs-module";
+const options = {
+    "encoding" : "utf8",
+    flag: 'w'
+}
+
+fs.writeFile('data.txt', data, options, (err) => {
+    if(err)
+        throw err;
+    console.log("File saved successfully!");
+})
