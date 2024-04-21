@@ -1,0 +1,19 @@
+{
+  "name": "basicsofnode",
+  "version": "1.0.0",
+  "description": "Learning Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikita1012/BasicsNodeJS.git"
+  },
+  "author": "Mikita Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikita1012/BasicsNodeJS/issues"
+  },
+  "homepage": "https://github.com/Mikita1012/BasicsNodeJS#readme"
+}
