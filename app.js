@@ -59,3 +59,7 @@ let obj1 = {
 
 // ------------------------------------------------------------------------------
 questions.alpha();
+
+// ---------------------------------------------------------------------------
+console.log("using nodemon here keepind app.js as starting point. whenever you made any changes in your file and saved it, the code written inside the file was automatically executed.");
+// [nodemon] starting `node app.js` == o/p for the code line above 
