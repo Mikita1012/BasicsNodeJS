@@ -49,10 +49,10 @@ console.log(cylinder.calculateVolume(radius, height)); // statement 5
 let obj1 = {
     x: 10,
     y: 20
-   }
-   let obj2 = obj1;
-   obj1.x = 30; // manipulating the key of obj1
-   console.log(obj1.x, obj2.x);
+}
+let obj2 = obj1;
+obj1.x = 30; // manipulating the key of obj1
+console.log(obj1.x, obj2.x);
 
 //    let obj2 = obj1;
 //    obj2.x = 30; // manipulating the key of obj1
@@ -84,12 +84,12 @@ const data = "Hello!This text here is written by app.js file using fs-module";
 // const data = "Hello! Let's learn NODE.JS";
 
 const options = {
-    "encoding" : "utf8",
+    "encoding": "utf8",
     flag: 'a'
 }
 
 fs.writeFile('data_async.txt', data, options, (err) => {
-    if(err)
+    if (err)
         throw err;
     console.log("File saved successfully!");
 })
@@ -98,8 +98,50 @@ fs.writeFile('data_async.txt', data, options, (err) => {
 // DONE USING SYNCHORONUS WAY 
 const message = "Hey, I\ 'm learning NodeJS";
 
-try{
-  fs.writeFileSync('data_sync.txt', data, options)  
-} catch(err) {
+try {
+    fs.writeFileSync('data_sync.txt', data, options)
+} catch (err) {
     throw err;
 }
+
+// ---------------------------------------------------------------------------
+//                  EVENTS - CORE MODULE 
+const EventEmitter = require('events');
+
+class MyEmitter extends EventEmitter { }
+
+const myEmitter = new MyEmitter();
+myEmitter.on('event', () => {
+    console.log('My event occurred!');
+});
+myEmitter.emit('event');
+
+// WE CAN WRITE THE SAME CODE IN A DIFFERENT MANNER 
+
+
+// Import events module
+const events = require('events');
+
+// Create an object of EventEmitter class
+const eventEmitter = new events.EventEmitter();
+
+// Define connectionMade event's handler
+const connectionHandler = () => {
+    console.log('Connection succesful!');
+    // fire dataRecieved event
+    eventEmitter.emit('dataReceived');
+};
+
+// bind connectionMade event with its event handler
+eventEmitter.on('connectionMade', connectionHandler);
+
+// bind dataReceived event with its event handler
+eventEmitter.on('dataReceived', () => {
+    console.log('Data received succesfully!');
+});
+
+// Fire connectionMade event
+eventEmitter.emit('connectionMade');
+
+// mark end of program
+console.log('End of program!');
